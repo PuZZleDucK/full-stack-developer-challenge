@@ -1,3 +1,36 @@
+
+
+# Infoxchange Developer Challenge
+
+This repository contains my submission for the Infoxchange developer challenge.
+
+Project Structure
+
+Tech. Django, Angular, Travis
+
+Testing
+
+
+
+# Plan
+- [ ] Review challenge and document approach, modules...
+- [ ] Documentation: license, coc...
+- [ ] Setup project
+- [ ] Setup deployment
+- [ ] Setup tests
+- [ ] Automate tests
+- [ ] TDD API
+- [ ] TDD front end
+- [ ] (extra) mobile feature: barcode scanner
+- [ ] Code Style review (pep...)
+- [ ] Readability review
+- [ ] Submit
+- [ ] Feedback
+
+
+
+# Challenge
+
 # Full-stack web developer challenge
 
 In this test, you are expected to write a small web application to manage a list of Books. Each book has a name, ISBN, and an author. The test consists of two parts, a RESTful API as the **backend** and the Javascript based **frontend** application
