@@ -8,6 +8,7 @@ Project Structure
 
 
 Tech. Python 3.5+ Django, Angular, Travis
+https://travis-ci.org/PuZZleDucK/full-stack-developer-challenge
 
 Testing, TDD
 
@@ -45,8 +46,8 @@ online deployment
 - [x] Setup deployment
 - [x] Setup api/unit test framework
 - [x] Automate api/unit tests
-- [ ] Author data model
-- [ ] Book data model
+- [x] Author data model
+- [x] Book data model
 - [ ] Author API
 - [ ] Book API
 - [ ] Setup angular framework
