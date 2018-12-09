@@ -18,6 +18,15 @@ export class ApiService {
     return this.httpClient.jsonp(url, 'callback')
   }
 
+  getAuthors(){
+    return  this.httpClient.get(`${this.API_URL}/authors?format=json`);
+
+    let params = new HttpParams()
+      .append('format', 'json');
+    const url = `${this.API_URL}?${params.toString()}`;
+    return this.httpClient.jsonp(url, 'callback')
+  }
+
   getBook(id){
     return  this.httpClient.get(`${this.API_URL}/book/${id}/?format=json`);
 

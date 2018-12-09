@@ -58,7 +58,8 @@ online deployment https://a-book-catalog.herokuapp.com/
 - [x] front end: Book Details
 - [x] front end: Create/Update author
 - [x] front end: Create/Update book
-- [ ] front end: Author Details
+- [x] front end: Author Details
+- [x] front end: Author list
 - [ ] UI: better layout, headers...
 - [ ] (extra) front end: Author Details
 - [ ] Stress testing / performance analysis

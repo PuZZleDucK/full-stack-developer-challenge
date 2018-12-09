@@ -32,7 +32,7 @@ export class AuthorCreateComponent implements OnInit {
     };
     this.apiService.createAuthor(author).subscribe((response) => {
       console.log(response);
-      this.router.navigate(['/books']);
+      this.router.navigate(['/authors']);
     });
     };
 

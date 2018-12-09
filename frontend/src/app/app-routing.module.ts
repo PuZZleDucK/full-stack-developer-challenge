@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthorListComponent } from './author-list/author-list.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { AuthorDetailComponent } from './author-detail/author-detail.component';
@@ -14,11 +15,15 @@ const routes: Routes = [
     component:  BookListComponent
   },
   {
+    path:  'authors',
+    component:  AuthorListComponent
+  },
+  {
     path:  'book/:id',
     component:  BookDetailComponent
   },
   {
-    path:  'author',
+    path:  'author/:id',
     component:  AuthorDetailComponent
   },
   {
