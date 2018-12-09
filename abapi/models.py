@@ -6,4 +6,4 @@ class Author(models.Model):
     last_name = models.TextField()
 
     def __str__(self):
-        return self.self.last_name + ", " + first_name
+        return self.last_name + ", " + self.first_name
