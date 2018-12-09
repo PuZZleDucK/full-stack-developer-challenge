@@ -1,5 +1,6 @@
 language: python
 python:
+  - "3.5"
   - "3.6"
 env:
   - DJANGO=2.1
@@ -21,7 +22,6 @@ script:
   - ng build
   - ng test --browsers=ChromeHeadless --watch=false
   - npm run webdriver-update
-  - ng e2e --no-webdriver-update
 deploy:
   provider: heroku
   api_key:
