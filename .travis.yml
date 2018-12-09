@@ -4,6 +4,12 @@ python:
   - "3.6"
 env:
   - DJANGO=2.1
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 install:
   - pip install -r requirements.txt
 script:
