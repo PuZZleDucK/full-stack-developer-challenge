@@ -17,6 +17,8 @@ install:
 script:
   - python manage.py test
   - cd frontend/
+  - npm install
+  - ng build
   - ng test --watch=false
   - ng e2e --no-webdriver-update
 deploy:
