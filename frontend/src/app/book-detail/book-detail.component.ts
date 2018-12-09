@@ -17,25 +17,25 @@ export class BookDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private  apiService:  ApiService) { }
 
+  // Extract id paramater and retrive relevant Book data
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-           this.id = +params['id'];
+      this.id = +params['id'];
     });
     this.getBook();
   }
 
+  // Extract relevant Book and Author data for view
   public getBook(){
-      this.apiService.getBook(this.id).subscribe((data:  Array<object>) => {
-          this.book =  data;
-          this.author_id = data["author"]
-          this.apiService.getAuthor(this.author_id).subscribe((author_data:  Array<object>) => {
-              const author = author_data
-              this.author_first_name = author["first_name"]
-              this.author_last_name = author["last_name"]
-              console.log(author_data);
-          });
-          console.log(data);
+    this.apiService.getBook(this.id).subscribe((data:  Array<object>) => {
+      this.book =  data;
+      this.author_id = data["author"]
+      this.apiService.getAuthor(this.author_id).subscribe((author_data:  Array<object>) => {
+        const author = author_data
+        this.author_first_name = author["first_name"]
+        this.author_last_name = author["last_name"]
       });
+    });
   }
 
 }

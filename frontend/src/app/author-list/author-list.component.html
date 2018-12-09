@@ -1,16 +1,15 @@
 <h2>Author List</h2>
 <div>
-<table  style="width:100%">
-<tr>
-    <th>Last Name</th>
-    <th>First Name</th>
-    <th>Id</th>
-</tr>
-<tr *ngFor="let author of authors">
-  <td style="text-align:center"><a [routerLink]="['/author', author.id]">  {{ author.first_name }} </a></td>
-  <td style="text-align:center"><a [routerLink]="['/author', author.id]">  {{ author.last_name }} </a></td>
-  <td style="text-align:center"> {{ author.id }} </td>
-</tr>
-</table>
-
+  <table style="width:100%">
+    <tr>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Id</th>
+    </tr>
+    <tr *ngFor="let author of authors">
+      <td style="text-align:center"><a [routerLink]="['/author', author.id]">  {{ author.first_name }} </a></td>
+      <td style="text-align:center"><a [routerLink]="['/author', author.id]">  {{ author.last_name }} </a></td>
+      <td style="text-align:center"> {{ author.id }} </td>
+    </tr>
+  </table>
 </div>

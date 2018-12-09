@@ -12,26 +12,28 @@ export class AuthorCreateComponent implements OnInit {
   private router: Router
   author_first_name: FormControl
   author_last_name: FormControl
-  myGroup: FormGroup
+  authorGroup: FormGroup
 
   constructor(private  apiService:  ApiService, private in_router: Router) {
     this.router = in_router;
   }
 
+  // Create form controlls for Author input
   ngOnInit() {
-    this.myGroup = new FormGroup({
+    this.authorGroup = new FormGroup({
       author_first_name: new FormControl(),
       author_last_name: new FormControl()
     });
   }
 
+  // Access form group to retrive latest values
   createAuthor(){
     var  author  = {
-        first_name: this.myGroup.controls["author_first_name"].value,
-        last_name:  this.myGroup.controls["author_last_name"].value
+        first_name: this.authorGroup.controls["author_first_name"].value,
+        last_name:  this.authorGroup.controls["author_last_name"].value
     };
     this.apiService.createAuthor(author).subscribe((response) => {
-      console.log(response);
+      // Route to author list after success
       this.router.navigate(['/authors']);
     });
     };

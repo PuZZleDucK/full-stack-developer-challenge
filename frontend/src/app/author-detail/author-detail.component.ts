@@ -16,6 +16,7 @@ export class AuthorDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private  apiService:  ApiService) { }
 
+  // Extract id paramater and retrive relevant Author data
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
            this.id = +params['id'];
@@ -23,13 +24,13 @@ export class AuthorDetailComponent implements OnInit {
     this.getAuthor();
   }
 
+  // Extract relevant Author data for view
   public getAuthor(){
-      this.apiService.getAuthor(this.id).subscribe((data:  Array<object>) => {
-          this.author =  data;
-          this.first_name = data["first_name"]
-          this.last_name = data["last_name"]
-      });
+    this.apiService.getAuthor(this.id).subscribe((data:  Array<object>) => {
+      this.author =  data;
+      this.first_name = data["first_name"]
+      this.last_name = data["last_name"]
+    });
   }
-
 
 }

@@ -1,17 +1,16 @@
 <h1>Create Author</h1>
-
   <div class="container">
-    <div [formGroup]="myGroup">
-    <label>
-      First Name:
-      <input type="text" formControlName="author_first_name">
-    </label>
-    <br />
-    <label>
-      Last Name:
-      <input type="text" formControlName="author_last_name">
-    </label>
-    <br />
-    <button (click)="createAuthor()">Create Author</button>
+    <div [formGroup]="authorGroup">
+      <label>
+        First Name:
+        <input type="text" formControlName="author_first_name">
+      </label>
+      <br />
+      <label>
+        Last Name:
+        <input type="text" formControlName="author_last_name">
+      </label>
+      <br />
+      <button (click)="createAuthor()">Create Author</button>
     </div>
   </div>

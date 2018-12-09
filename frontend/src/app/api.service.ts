@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
+// This class handles all api requests to the backend and provides easy access
+// for the rest of the app
 @Injectable({
   providedIn: 'root'
 })
@@ -11,38 +13,18 @@ export class ApiService {
 
   getBooks(){
     return  this.httpClient.get(`${this.API_URL}/books?format=json`);
-
-    let params = new HttpParams()
-      .append('format', 'json');
-    const url = `${this.API_URL}?${params.toString()}`;
-    return this.httpClient.jsonp(url, 'callback')
   }
 
   getAuthors(){
     return  this.httpClient.get(`${this.API_URL}/authors?format=json`);
-
-    let params = new HttpParams()
-      .append('format', 'json');
-    const url = `${this.API_URL}?${params.toString()}`;
-    return this.httpClient.jsonp(url, 'callback')
   }
 
   getBook(id){
     return  this.httpClient.get(`${this.API_URL}/book/${id}/?format=json`);
-
-    let params = new HttpParams()
-      .append('format', 'json');
-    const url = `${this.API_URL}?${params.toString()}`;
-    return this.httpClient.jsonp(url, 'callback')
   }
 
   getAuthor(id){
     return  this.httpClient.get(`${this.API_URL}/author/${id}/?format=json`);
-
-    let params = new HttpParams()
-      .append('format', 'json');
-    const url = `${this.API_URL}?${params.toString()}`;
-    return this.httpClient.jsonp(url, 'callback')
   }
 
   createAuthor(author){
