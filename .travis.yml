@@ -1,0 +1,17 @@
+language: python
+python:
+  - "2.6"
+  - "2.7"
+env:
+  - DJANGO=2.1
+install:
+  - pip install -r requirements.txt
+script:
+  - python manage.py test
+deploy:
+  provider: heroku
+  api_key:
+    secure: "N7keYWz8INj5sO1fy1uJZ/4avMgbAndIYHwmI/QaQ8Etyv9OAXtGTdwx7to5IP7auJ5QO0Ys/KijbuakJpVywp/K7LyKimodO31Gbuut7j0+Q2hWYZcnsuq0yjSjtoA8Oz9mpYpsrhdnfA82tFkLjHUdG8uDp5aFrVmiePOpHZtK2bubSgRHrDQuRNAu5Mz/AN9vz9WbRqR5GiEMQU5LcBfLTMsJ7aLLWbR3fETMB/LYkHU//mv7wsUBbIPEbr8ZGlIwTTr7JVWIczggPpjVT8ZeKfOqMw0L51MwRu0x+wilVt1CaObGThycDeixSYGHznaXu/Hwib+A7U9hDFLdu7Taovgedljo8SrrzI4hezz86FL+grSjTmgXKsM1YJEAblwJav5ucua0VY9/TOEArC9SJYelFhaJqnXGyjioucRmXrO00PAtGoknFETdGhH5hIW1IFriYaJEcpyjpffz0CpYZWCtYkV5SdO1bZ6UGuBiCk+xrS029yRPStgrz1eDd6LSZx/Bzx6nNVeEEv22/BXz5zFd5x1hK/jB89AZ7PGftYdtcNnLftIVuIEJu57MXC6nbPxxSNRqfIkRBusNyXPTeQFWAh/voqZiPPHhuRXvrxxZ2QDxFhjtKzpHa4cump6PBhTgT1Exx48+81NGnfXD+O3ofQRWLOuVaAbL8Ik="
+  app: a-book-catalog
+  on:
+    repo: puzzleduck/full-stack-developer-challenge
