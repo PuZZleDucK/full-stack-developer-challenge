@@ -8,6 +8,7 @@ Project Structure
 
 
 Tech. Python 3.5+ Django, Angular, Travis
+https://travis-ci.org/PuZZleDucK/full-stack-developer-challenge
 
 Testing, TDD
 
