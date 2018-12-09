@@ -5,9 +5,9 @@ from .models import Author, Book
 class ApiTest(TestCase):
 	def test_author_api_create(self):
 		initial_count = Author.objects.all().count()
-		response = self.client.post('/authors/', {'first_name':'api-first','last_name':'api-last'})
-		self.assertEqual(response.status_code, 200)
-		self.assertContains(initial_count + 1, Author.objects.all().count())
+		response = self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
+		self.assertEqual(response.status_code, 201)
+		self.assertEqual(initial_count + 1, Author.objects.all().count())
 
 class ModelTest(TestCase):
 	def test_author_model_creation(self):

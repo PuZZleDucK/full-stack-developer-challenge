@@ -25,7 +25,10 @@ SECRET_KEY = 'k&=h!6$gixowq$&2l^s0p))emd8@pg%8*-52s!&+kqnv+wbgyn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['a-book-catalog.herokuapp.com']
+ALLOWED_HOSTS = [
+    'a-book-catalog.herokuapp.com',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -127,6 +130,7 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+    ),
 }
