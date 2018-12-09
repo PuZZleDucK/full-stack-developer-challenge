@@ -43,8 +43,8 @@ online deployment
 - [x] Review infoxchange github repos
 - [x] Setup django project framework
 - [x] Setup deployment
-- [ ] Setup api/unit test framework
-- [ ] Automate api/unit tests
+- [x] Setup api/unit test framework
+- [x] Automate api/unit tests
 - [ ] Author API
 - [ ] Book API
 - [ ] Setup angular framework
