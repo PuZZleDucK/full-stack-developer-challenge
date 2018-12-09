@@ -7,7 +7,7 @@ This repository contains my submission for the Infoxchange developer challenge.
 Project Structure
 
 
-Tech. Django, Angular, Travis
+Tech. Python 3.5+ Django, Angular, Travis
 
 Testing, TDD
 
@@ -33,6 +33,7 @@ online deployment
 - GitHub: Infoxchange use MIT and GPL
 - GitHub: todo lists
 - GitHub: samples and examples
+
 
 
 ## Plan
