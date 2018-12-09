@@ -27,6 +27,15 @@ export class ApiService {
     return this.httpClient.jsonp(url, 'callback')
   }
 
+  getAuthor(id){
+    return  this.httpClient.get(`${this.API_URL}/author/${id}/?format=json`);
+
+    let params = new HttpParams()
+      .append('format', 'json');
+    const url = `${this.API_URL}?${params.toString()}`;
+    return this.httpClient.jsonp(url, 'callback')
+  }
+
   createAuthor(author){
       return  this.httpClient.post(`${this.API_URL}/author/`, author);
   }

@@ -8,7 +8,7 @@
     <th>Author</th>
 </tr>
 <tr *ngFor="let book of books">
-    <td><a [routerLink]="['/book', book.id]"> Contacts  {{ book.name }} </a></td>
+    <td><a [routerLink]="['/book', book.id]">  {{ book.name }} </a></td>
     <td> {{ book.id }} </td>
     <td> {{ book.isbn }} </td>
     <td> {{ book.author }} </td>

@@ -19,13 +19,10 @@ export class AuthorCreateComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.author_first_name = new FormControl('');
-    // this.author_last_name = new FormControl('');
     this.myGroup = new FormGroup({
       author_first_name: new FormControl(),
       author_last_name: new FormControl()
     });
-    console.log(this.myGroup.controls["author_last_name"].value);
   }
 
   createAuthor(){
@@ -35,8 +32,6 @@ export class AuthorCreateComponent implements OnInit {
     };
     this.apiService.createAuthor(author).subscribe((response) => {
       console.log(response);
-      console.log(response["first_name"]);
-      console.log(response["last_name"]);
       this.router.navigate(['/books']);
     });
     };
