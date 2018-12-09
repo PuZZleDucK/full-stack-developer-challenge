@@ -4,10 +4,24 @@ python:
   - "3.6"
 env:
   - DJANGO=2.1
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+      - ng-common
 install:
   - pip install -r requirements.txt
+  - npm install -g @angular/cli
 script:
   - python manage.py test
+  - cd frontend/
+  - npm install
+  - npm install -g webdriver-manager
+  - ng build
+  - ng test --browsers=ChromeHeadless --watch=false
+  - npm run webdriver-update
 deploy:
   provider: heroku
   api_key:

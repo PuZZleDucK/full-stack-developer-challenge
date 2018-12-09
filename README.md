@@ -51,8 +51,8 @@ online deployment https://a-book-catalog.herokuapp.com/
 - [x] Setup api test
 - [x] Author API
 - [x] Book API
-- [ ] Setup angular framework
-- [ ] setup front end/integration tests
+- [x] Setup angular framework
+- [x] setup front end/integration tests
 - [ ] Automate front end tests
 - [ ] TDD front end
 - [ ] front end: Homepage
