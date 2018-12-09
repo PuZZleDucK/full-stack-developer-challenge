@@ -1,6 +1,6 @@
 
 
-# Infoxchange Developer Challenge
+# Developer Response: A Book Catalog
 
 This repository contains my submission for the Infoxchange developer challenge.
 
@@ -26,26 +26,34 @@ online deployment
 ## Assumptions and Issues
 - clear specification
 - ambiguious use case and workload
+- GitHub: Infoxchange use docker (and Pallet)
+- GitHub: Infoxchange use travis
+- GitHub: Infoxchange use coveralls.io
+- GitHub: Infoxchange use Pypi for packaging and badges
+- GitHub: Infoxchange use MIT and GPL
+- GitHub: todo lists
+- GitHub: samples and examples
 
 
 ## Plan
 
 - [x] Review challenge and document approach, consider structure and composition...
 - [x] Documentation: license, coc...
-- [ ] Review infoxchange github repos
-- [ ] Setup project framework
+- [x] Review infoxchange github repos
+- [ ] Setup django project framework
 - [ ] Setup deployment
 - [ ] Setup api/unit test framework
 - [ ] Automate api/unit tests
 - [ ] Author API
 - [ ] Book API
+- [ ] Setup angular framework
 - [ ] setup front end/integration tests
 - [ ] Automate front end tests
 - [ ] TDD front end
 - [ ] front end: Homepage
 - [ ] front end: Book List
 - [ ] front end: Book Details
-- [ ] front end: Create/Update aurthor
+- [ ] front end: Create/Update author
 - [ ] front end: Create/Update book
 - [ ] (extra) front end: Author Details
 - [ ] Stress testing / performance analysis
@@ -61,8 +69,8 @@ online deployment
 
 write a small web application to manage a list of Books
 Each book has a name, ISBN, and an author.
-a RESTful API as the **backend**
-Javascript based **frontend** application
+a RESTful API as the backend
+Javascript based frontend application
 
 API endpoints:
 - [ ] GET /books/ - list of books in the database in JSON format
@@ -76,7 +84,7 @@ API endpoints to update existing records (optional):
 - [ ] PUT /author/{{id}} - Updates an existing author - Expects a JSON body
 - [ ] PUT /book/{{id}} - Updates an existing book - Expects a JSON body
 
-recommended to use **Python/Django** along with [**Django REST Framework**](http://www.django-rest-framework.org/)
+recommended to use Python/Django along with [**Django REST Framework**](http://www.django-rest-framework.org/)
 you are free to use a different language/framework/libraries
 
 a small frontend application to consume the API
@@ -84,7 +92,7 @@ a small frontend application to consume the API
 show a list of names of the books available in the database
 clicking the name of a book on the list, navigate to a more detailed view of the book, with the ISBN and the author details.
 two forms where the user is able to create/update authors and books (using the POST and PUT endpoints)
-You are recommended to use **ReactJS** to create the frontend
+You are recommended to use ReactJS to create the frontend
 you are free to use a different Javascript framework.
 
 
@@ -109,4 +117,3 @@ class Book(Model):
     isbn = models.TextField()
     author = models.ForeignKey(Author)
 ```
-
