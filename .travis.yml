@@ -14,6 +14,7 @@ addons:
 install:
   - pip install -r requirements.txt
   - npm install -g @angular/cli
+  - npm install -g webdriver-manager
 script:
   - python manage.py test
   - cd frontend/
