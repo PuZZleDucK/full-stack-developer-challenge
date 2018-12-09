@@ -17,11 +17,11 @@ Validations
 
 ## Getting and Running the project
 
-clone
+git clone https://github.com/PuZZleDucK/full-stack-developer-challenge
 init
 run dev
 test
-online deployment
+online deployment https://a-book-catalog.herokuapp.com/
 
 
 ## Assumptions and Issues
@@ -83,7 +83,7 @@ API endpoints:
 - [x] GET /authors/ - list of authors in the database in JSON format
 - [x] GET /author/{{id}}/ - detail view of the specified author id
 - [x] POST /author/ - new author with the specified details - Expects a JSON body
-- [ ] POST /book/ - new book with the specified details - Expects a JSON body
+- [x] POST /book/ - new book with the specified details - Expects a JSON body
 
 API endpoints to update existing records (optional):
 - [ ] PUT /author/{{id}} - Updates an existing author - Expects a JSON body
