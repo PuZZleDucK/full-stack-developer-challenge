@@ -19,7 +19,8 @@ script:
   - cd frontend/
   - npm install
   - ng build
-  - ng test --watch=false
+  - ng test --browsers=ChromeHeadless --watch=false
+  - webdriver-manager update
   - ng e2e --no-webdriver-update
 deploy:
   provider: heroku
