@@ -16,9 +16,9 @@ install:
 script:
   - python manage.py test
   - cd frontend/
-  - pwd
-  - ng test --watch=false --browsers=ChromeHeadless
-  - ng e2e
+  - ng test --watch=false
+  - ng test --browsers=ChromeHeadless
+  - ng e2e --no-webdriver-update
 deploy:
   provider: heroku
   api_key:
