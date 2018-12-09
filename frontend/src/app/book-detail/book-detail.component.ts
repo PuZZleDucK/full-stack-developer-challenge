@@ -24,7 +24,7 @@ export class BookDetailComponent implements OnInit {
     this.getBook();
   }
 
-  public  getBook(){
+  public getBook(){
       this.apiService.getBook(this.id).subscribe((data:  Array<object>) => {
           this.book =  data;
           this.author_id = data["author"]

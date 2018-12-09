@@ -10,6 +10,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 import { AuthorDetailComponent } from './author-detail/author-detail.component';
 import { AuthorCreateComponent } from './author-create/author-create.component';
 import { BookCreateComponent } from './book-create/book-create.component';
+import { AuthorListComponent } from './author-list/author-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BookCreateComponent } from './book-create/book-create.component';
     BookDetailComponent,
     AuthorDetailComponent,
     AuthorCreateComponent,
-    BookCreateComponent
+    BookCreateComponent,
+    AuthorListComponent
   ],
   imports: [
     BrowserModule,
