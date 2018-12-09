@@ -17,11 +17,11 @@ Validations
 
 ## Getting and Running the project
 
-clone
+git clone https://github.com/PuZZleDucK/full-stack-developer-challenge
 init
 run dev
 test
-online deployment
+online deployment https://a-book-catalog.herokuapp.com/
 
 
 ## Assumptions and Issues
@@ -44,12 +44,13 @@ online deployment
 - [x] Review infoxchange github repos
 - [x] Setup django project framework
 - [x] Setup deployment
-- [x] Setup api/unit test framework
-- [x] Automate api/unit tests
+- [x] Setup unit test framework
+- [x] Automate tests
 - [x] Author data model
 - [x] Book data model
-- [ ] Author API
-- [ ] Book API
+- [x] Setup api test
+- [x] Author API
+- [x] Book API
 - [ ] Setup angular framework
 - [ ] setup front end/integration tests
 - [ ] Automate front end tests
@@ -77,12 +78,12 @@ a RESTful API as the backend
 Javascript based frontend application
 
 API endpoints:
-- [ ] GET /books/ - list of books in the database in JSON format
-- [ ] GET /book/{{id}}/ - detail view of the specified book id. Nest author details in JSON format
-- [ ] GET /authors/ - list of authors in the database in JSON format
-- [ ] GET /author/{{id}}/ - detail view of the specified author id
-- [ ] POST /author/ - new author with the specified details - Expects a JSON body
-- [ ] POST /book/ - new book with the specified details - Expects a JSON body
+- [x] GET /books/ - list of books in the database in JSON format
+- [x] GET /book/{{id}}/ - detail view of the specified book id. Nest author details in JSON format
+- [x] GET /authors/ - list of authors in the database in JSON format
+- [x] GET /author/{{id}}/ - detail view of the specified author id
+- [x] POST /author/ - new author with the specified details - Expects a JSON body
+- [x] POST /book/ - new book with the specified details - Expects a JSON body
 
 API endpoints to update existing records (optional):
 - [ ] PUT /author/{{id}} - Updates an existing author - Expects a JSON body

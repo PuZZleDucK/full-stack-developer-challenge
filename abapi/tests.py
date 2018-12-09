@@ -1,10 +1,46 @@
 from django.test import TestCase
 from .models import Author, Book
 
-# Create your tests here.
-class SanityTest(TestCase):
-	def test_tautology(self):
-		self.assertEqual(True, True)
+
+class ApiTest(TestCase):
+	def test_book_api_get_id(self):
+		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
+		self.client.post('/book/', {'name':'api-book','isbn':'0137129297','author': '1'})
+		response = self.client.get('/book/1/')
+		self.assertEqual(response.status_code, 200)
+		self.assertEqual(response.json(), {'id': 1, 'name':'api-book','isbn':'0137129297','author': 1})
+
+	def test_book_api_get(self):
+		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
+		self.client.post('/book/', {'name':'api-book','isbn':'0137129297','author': '1'})
+		response = self.client.get('/books/')
+		self.assertEqual(response.status_code, 200)
+		self.assertEqual(1, len(response.json()))
+
+	def test_book_api_create(self):
+		initial_count = Book.objects.all().count()
+		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
+		response = self.client.post('/book/', {'name':'api-book','isbn':'0137129297','author': '1'})
+		self.assertEqual(response.status_code, 201)
+		self.assertEqual(initial_count + 1, Book.objects.all().count())
+
+	def test_author_api_get_id(self):
+		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
+		response = self.client.get('/author/1/')
+		self.assertEqual(response.status_code, 200)
+		self.assertEqual(response.json(), {'id': 1, 'first_name':'api-first','last_name':'api-last'})
+
+	def test_author_api_get(self):
+		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
+		response = self.client.get('/authors/')
+		self.assertEqual(response.status_code, 200)
+		self.assertEqual(1, len(response.json()))
+
+	def test_author_api_create(self):
+		initial_count = Author.objects.all().count()
+		response = self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
+		self.assertEqual(response.status_code, 201)
+		self.assertEqual(initial_count + 1, Author.objects.all().count())
 
 class ModelTest(TestCase):
 	def test_author_model_creation(self):
@@ -27,3 +63,7 @@ class ModelTest(TestCase):
 		author = Author(first_name="author-first", last_name="author-last")
 		book = Book(name="test-book", isbn="0137129297", author=author)
 		self.assertEqual("author-last. 'test-book' ISBN 0137129297", str(book))
+
+class SanityTest(TestCase):
+	def test_tautology(self):
+		self.assertEqual(True, True)
