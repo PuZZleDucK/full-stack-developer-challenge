@@ -56,7 +56,7 @@ online deployment https://a-book-catalog.herokuapp.com/
 - [x] Automate front end tests
 - [x] front end: Homepage: Book List
 - [x] front end: Book Details
-- [ ] front end: Create/Update author
+- [x] front end: Create/Update author
 - [ ] front end: Create/Update book
 - [ ] front end: Author Details
 - [ ] UI: better layout, headers...

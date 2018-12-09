@@ -16,7 +16,6 @@ export class ApiService {
       .append('format', 'json');
     const url = `${this.API_URL}?${params.toString()}`;
     return this.httpClient.jsonp(url, 'callback')
-
   }
 
   getBook(id){
@@ -26,6 +25,10 @@ export class ApiService {
       .append('format', 'json');
     const url = `${this.API_URL}?${params.toString()}`;
     return this.httpClient.jsonp(url, 'callback')
-
   }
+
+  createAuthor(author){
+      return  this.httpClient.post(`${this.API_URL}/author/`, author);
+  }
+
 }

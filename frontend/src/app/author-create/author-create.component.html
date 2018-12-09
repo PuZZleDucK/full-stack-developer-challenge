@@ -1,3 +1,15 @@
-<p>
-  author-create works!
-</p>
+<h1>Create Author</h1>
+
+  <div class="container">
+    <div [formGroup]="myGroup">
+    <label>
+      First Name:
+      <input type="text" formControlName="author_first_name">
+    </label>
+    <label>
+      Last Name:
+      <input type="text" formControlName="author_last_name">
+    </label>
+    <button (click)="createAuthor()">Create Author</button>
+    </div>
+  </div>
