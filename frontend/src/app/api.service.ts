@@ -31,4 +31,8 @@ export class ApiService {
       return  this.httpClient.post(`${this.API_URL}/author/`, author);
   }
 
+  createBook(book){
+      return  this.httpClient.post(`${this.API_URL}/book/`, book);
+  }
+
 }

@@ -57,7 +57,7 @@ online deployment https://a-book-catalog.herokuapp.com/
 - [x] front end: Homepage: Book List
 - [x] front end: Book Details
 - [x] front end: Create/Update author
-- [ ] front end: Create/Update book
+- [x] front end: Create/Update book
 - [ ] front end: Author Details
 - [ ] UI: better layout, headers...
 - [ ] (extra) front end: Author Details
@@ -75,7 +75,7 @@ online deployment https://a-book-catalog.herokuapp.com/
 - [ ] write a small web application to manage a list of Books
 - [x] Each book has a name, ISBN, and an author.
 - [x] a RESTful API as the backend
-- [ ] Javascript based frontend application
+- [x] Javascript based frontend application
 
 - [x] API endpoints:
 - [x] GET /books/ - list of books in the database in JSON format
@@ -96,7 +96,7 @@ online deployment https://a-book-catalog.herokuapp.com/
 
 - [x] show a list of names of the books available in the database
 - [ ] clicking the name of a book on the list, navigate to a more detailed view of the book, with the ISBN and the author details.
-- [ ] two forms where the user is able to create/update authors and books (using the POST and PUT endpoints)
+- [x] two forms where the user is able to create/update authors and books (using the POST and PUT endpoints)
 - [x] You are recommended to use ReactJS to create the frontend
 - [x] you are free to use a different Javascript framework.
 
