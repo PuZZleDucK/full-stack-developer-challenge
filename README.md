@@ -48,8 +48,8 @@ online deployment
 - [x] Automate tests
 - [x] Author data model
 - [x] Book data model
-- [ ] Setup api test
-- [ ] Author API
+- [x] Setup api test
+- [x] Author API
 - [ ] Book API
 - [ ] Setup angular framework
 - [ ] setup front end/integration tests
