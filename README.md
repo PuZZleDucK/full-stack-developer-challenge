@@ -41,7 +41,7 @@ online deployment
 - [x] Documentation: license, coc...
 - [x] Review infoxchange github repos
 - [x] Setup django project framework
-- [ ] Setup deployment
+- [x] Setup deployment
 - [ ] Setup api/unit test framework
 - [ ] Automate api/unit tests
 - [ ] Author API
