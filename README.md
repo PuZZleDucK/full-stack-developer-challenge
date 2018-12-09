@@ -80,9 +80,9 @@ Javascript based frontend application
 API endpoints:
 - [ ] GET /books/ - list of books in the database in JSON format
 - [ ] GET /book/{{id}}/ - detail view of the specified book id. Nest author details in JSON format
-- [ ] GET /authors/ - list of authors in the database in JSON format
-- [ ] GET /author/{{id}}/ - detail view of the specified author id
-- [ ] POST /author/ - new author with the specified details - Expects a JSON body
+- [x] GET /authors/ - list of authors in the database in JSON format
+- [x] GET /author/{{id}}/ - detail view of the specified author id
+- [x] POST /author/ - new author with the specified details - Expects a JSON body
 - [ ] POST /book/ - new book with the specified details - Expects a JSON body
 
 API endpoints to update existing records (optional):
