@@ -10,6 +10,7 @@ addons:
       - google-chrome
     packages:
       - google-chrome-stable
+      - ng-common
 install:
   - pip install -r requirements.txt
 script:
