@@ -13,11 +13,11 @@ addons:
       - ng-common
 install:
   - pip install -r requirements.txt
+  - npm install -g @angular/cli
 script:
   - python manage.py test
   - cd frontend/
   - ng test --watch=false
-  - ng test --browsers=ChromeHeadless
   - ng e2e --no-webdriver-update
 deploy:
   provider: heroku
