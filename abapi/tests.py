@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Author
+from .models import Author, Book
 
 # Create your tests here.
 class SanityTest(TestCase):
@@ -21,4 +21,4 @@ class ModelTest(TestCase):
 		book = Book(name="test-book", isbn="0137129297", author=author)
 		self.assertEqual("test-book", book.name)
 		self.assertEqual("0137129297", book.isbn)
-		self.assertEqual("author-last, author-first", book.author)
+		self.assertEqual("author-last, author-first", str(book.author))
