@@ -7,9 +7,9 @@
     <th>Id</th>
 </tr>
 <tr *ngFor="let author of authors">
-  <td><a [routerLink]="['/author', author.id]">  {{ author.first_name }} </a></td>
-  <td><a [routerLink]="['/author', author.id]">  {{ author.last_name }} </a></td>
-  <td> {{ author.id }} </td>
+  <td style="text-align:center"><a [routerLink]="['/author', author.id]">  {{ author.first_name }} </a></td>
+  <td style="text-align:center"><a [routerLink]="['/author', author.id]">  {{ author.last_name }} </a></td>
+  <td style="text-align:center"> {{ author.id }} </td>
 </tr>
 </table>
 
