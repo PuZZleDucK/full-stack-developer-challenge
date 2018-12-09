@@ -3,6 +3,13 @@ from .models import Author, Book
 
 
 class ApiTest(TestCase):
+	def test_book_api_get_id(self):
+		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
+		self.client.post('/book/', {'name':'api-book','isbn':'0137129297','author': '1'})
+		response = self.client.get('/book/1/')
+		self.assertEqual(response.status_code, 200)
+		self.assertEqual(response.json(), {'id': 1, 'name':'api-book','isbn':'0137129297','author': 1})
+
 	def test_book_api_get(self):
 		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
 		self.client.post('/book/', {'name':'api-book','isbn':'0137129297','author': '1'})
