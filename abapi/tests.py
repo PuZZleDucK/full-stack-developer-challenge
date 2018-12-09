@@ -1,4 +1,5 @@
 from django.test import TestCase
+from .models import Author
 
 # Create your tests here.
 class SanityTest(TestCase):

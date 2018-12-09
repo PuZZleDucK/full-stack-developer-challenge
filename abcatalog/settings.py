@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['a-book-catalog.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'abapi.apps.AbapiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -45,6 +45,8 @@ online deployment
 - [x] Setup deployment
 - [x] Setup api/unit test framework
 - [x] Automate api/unit tests
+- [ ] Author data model
+- [ ] Book data model
 - [ ] Author API
 - [ ] Book API
 - [ ] Setup angular framework
