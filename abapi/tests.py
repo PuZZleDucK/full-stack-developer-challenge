@@ -1,10 +1,13 @@
 from django.test import TestCase
 from .models import Author, Book
 
-# Create your tests here.
-class SanityTest(TestCase):
-	def test_tautology(self):
-		self.assertEqual(True, True)
+
+class ApiTest(TestCase):
+	def test_author_api_create(self):
+		initial_count = Author.objects.all().count()
+		response = self.client.post('/authors/', {'first_name':'api-first','last_name':'api-last'})
+		self.assertEqual(response.status_code, 200)
+		self.assertContains(initial_count + 1, Author.objects.all().count())
 
 class ModelTest(TestCase):
 	def test_author_model_creation(self):
@@ -27,3 +30,7 @@ class ModelTest(TestCase):
 		author = Author(first_name="author-first", last_name="author-last")
 		book = Book(name="test-book", isbn="0137129297", author=author)
 		self.assertEqual("author-last. 'test-book' ISBN 0137129297", str(book))
+
+class SanityTest(TestCase):
+	def test_tautology(self):
+		self.assertEqual(True, True)
