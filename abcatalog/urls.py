@@ -16,23 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
-from rest_framework import routers, serializers, viewsets
-from abapi.models import Author
 
-class AuthorSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Author
-        fields = ('url', 'first_name', 'last_name')
 
-class AuthorViewSet(viewsets.ModelViewSet):
-    queryset = Author.objects.all()
-    serializer_class = AuthorSerializer
-
-router = routers.DefaultRouter()
-router.register(r'author', AuthorViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url('', include('abapi.urls'))
 ]
