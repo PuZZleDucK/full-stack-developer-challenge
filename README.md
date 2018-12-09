@@ -40,7 +40,7 @@ online deployment
 - [x] Review challenge and document approach, consider structure and composition...
 - [x] Documentation: license, coc...
 - [x] Review infoxchange github repos
-- [ ] Setup django project framework
+- [x] Setup django project framework
 - [ ] Setup deployment
 - [ ] Setup api/unit test framework
 - [ ] Automate api/unit tests
