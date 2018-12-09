@@ -60,9 +60,9 @@ online deployment https://a-book-catalog.herokuapp.com/
 - [x] front end: Create/Update book
 - [x] front end: Author Details
 - [x] front end: Author list
-- [ ] UI: better layout, headers...
+- [x] UI: better layout, headers...
 - [ ] (extra) front end: Author Details
-- [ ] Stress testing / performance analysis
+- [ ] (extra)Stress testing / performance analysis
 - [ ] (extra) mobile feature: barcode scanner
 - [ ] Code Style review (pep...)
 - [ ] Readability review

@@ -7,5 +7,5 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontend';
+  title = ':: A Book Catalog ::';
 }

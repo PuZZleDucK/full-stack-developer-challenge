@@ -26,7 +26,7 @@ describe('AppComponent', () => {
   it(`should have as title 'frontend'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('frontend');
+    expect(app.title).toEqual(':: A Book Catalog ::');
   });
 
   it(`should have a title 'Book List'`, () => {
@@ -54,6 +54,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to frontend!');
+    expect(compiled.querySelector('h1').textContent).toContain(':: A Book Catalog ::');
   });
 });
