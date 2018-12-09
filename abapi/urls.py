@@ -11,5 +11,6 @@ router.register('book', BookViewSet)
 
 urlpatterns = [
     url('^authors/', AuthorViewSet.as_view({'get': 'list'})),
+    url('^books/', BookViewSet.as_view({'get': 'list'})),
     url('', include(router.urls)),
 ]
