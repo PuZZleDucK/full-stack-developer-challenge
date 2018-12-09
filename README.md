@@ -53,13 +53,14 @@ online deployment https://a-book-catalog.herokuapp.com/
 - [x] Book API
 - [x] Setup angular framework
 - [x] setup front end/integration tests
-- [ ] Automate front end tests
-- [ ] TDD front end
-- [ ] front end: Homepage
-- [ ] front end: Book List
-- [ ] front end: Book Details
-- [ ] front end: Create/Update author
-- [ ] front end: Create/Update book
+- [x] Automate front end tests
+- [x] front end: Homepage: Book List
+- [x] front end: Book Details
+- [x] front end: Create/Update author
+- [x] front end: Create/Update book
+- [x] front end: Author Details
+- [x] front end: Author list
+- [ ] UI: better layout, headers...
 - [ ] (extra) front end: Author Details
 - [ ] Stress testing / performance analysis
 - [ ] (extra) mobile feature: barcode scanner
@@ -72,12 +73,12 @@ online deployment https://a-book-catalog.herokuapp.com/
 
 ## Challenge Statement
 
-write a small web application to manage a list of Books
-Each book has a name, ISBN, and an author.
-a RESTful API as the backend
-Javascript based frontend application
+- [ ] write a small web application to manage a list of Books
+- [x] Each book has a name, ISBN, and an author.
+- [x] a RESTful API as the backend
+- [x] Javascript based frontend application
 
-API endpoints:
+- [x] API endpoints:
 - [x] GET /books/ - list of books in the database in JSON format
 - [x] GET /book/{{id}}/ - detail view of the specified book id. Nest author details in JSON format
 - [x] GET /authors/ - list of authors in the database in JSON format
@@ -85,30 +86,30 @@ API endpoints:
 - [x] POST /author/ - new author with the specified details - Expects a JSON body
 - [x] POST /book/ - new book with the specified details - Expects a JSON body
 
-API endpoints to update existing records (optional):
+- [ ] API endpoints to update existing records (optional):
 - [ ] PUT /author/{{id}} - Updates an existing author - Expects a JSON body
 - [ ] PUT /book/{{id}} - Updates an existing book - Expects a JSON body
 
-recommended to use Python/Django along with [**Django REST Framework**](http://www.django-rest-framework.org/)
-you are free to use a different language/framework/libraries
+- [x] recommended to use Python/Django along with [**Django REST Framework**](http://www.django-rest-framework.org/)
+- [x] you are free to use a different language/framework/libraries
 
-a small frontend application to consume the API
+- [ ] a small frontend application to consume the API
 
-show a list of names of the books available in the database
-clicking the name of a book on the list, navigate to a more detailed view of the book, with the ISBN and the author details.
-two forms where the user is able to create/update authors and books (using the POST and PUT endpoints)
-You are recommended to use ReactJS to create the frontend
-you are free to use a different Javascript framework.
+- [x] show a list of names of the books available in the database
+- [ ] clicking the name of a book on the list, navigate to a more detailed view of the book, with the ISBN and the author details.
+- [x] two forms where the user is able to create/update authors and books (using the POST and PUT endpoints)
+- [x] You are recommended to use ReactJS to create the frontend
+- [x] you are free to use a different Javascript framework.
 
 
-The project structure is up to you to decide
-You are recommended to use git commits in a logical manner to demonstrate the development progress
-Writing tests and adhering to development standards/conventions will let you gain extra points :)
+- [ ] The project structure is up to you to decide
+- [ ] You are recommended to use git commits in a logical manner to demonstrate the development progress
+- [ ] Writing tests and adhering to development standards/conventions will let you gain extra points :)
 
 
 ### Data structure
 
-Use the following structure to model the data
+- [x] Use the following structure to model the data
 
 ```
 class Author(Model):

@@ -1,3 +1,7 @@
-<p>
-  book-detail works!
-</p>
+<h2>Book Detail</h2>
+<div>
+    <h4>Name: {{ book.name }}</h4>
+    <h3>Author: <a [routerLink]="['/author', author_id]"> {{ author_last_name }}, {{ author_first_name }} (Id: {{ author_id }})</a></h3>
+    <p>Book Index: {{ book.id }}</p>
+    <p>ISBN: {{ book.isbn }}</p>
+</div>

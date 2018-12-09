@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClientJsonpModule } from  '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 import { AuthorDetailComponent } from './author-detail/author-detail.component';
 import { AuthorCreateComponent } from './author-create/author-create.component';
 import { BookCreateComponent } from './book-create/book-create.component';
+import { AuthorListComponent } from './author-list/author-list.component';
 
 @NgModule({
   declarations: [
@@ -17,16 +20,19 @@ import { BookCreateComponent } from './book-create/book-create.component';
     BookDetailComponent,
     AuthorDetailComponent,
     AuthorCreateComponent,
-    BookCreateComponent
+    BookCreateComponent,
+    AuthorListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientJsonpModule
-
+    HttpClientJsonpModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [ReactiveFormsModule]
 })
 export class AppModule { }
