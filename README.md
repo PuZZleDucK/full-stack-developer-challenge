@@ -96,15 +96,15 @@ Below I have included a checklist I've used to monitor my goals and progress for
 - [x] UI: better layout, headers...
 - [x] Readability review
 - [x] Improve docs
-- [ ] postgres db
-- [ ] frontend deployment (pages?)
+- [ ] postgres db for heroku
+- [ ] frontend deployment (GH pages?)
 - [ ] (extra) front end: Author Details
 - [ ] (extra) Stress testing / performance analysis
 - [ ] (extra) mobile feature: barcode scanner
 - [ ] (extra) dropdown list of authors
-- [ ] remove secrets
+- [ ] (extra) remove secrets
 - [ ] Code Style review (pep...)
-- [ ] Submit
+- [x] Submit
 - [ ] Feedback
 
 
