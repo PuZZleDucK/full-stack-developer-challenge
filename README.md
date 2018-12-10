@@ -2,11 +2,17 @@
 
 # Developer Response: A Book Catalog
 
-This repository contains A.B.C.: "A Book Catalog", which is my submission for the Infoxchange developer challenge. The project is a Django backend with an Angular frontend. The project has three main directories, the first is `abcatalog` which is the top level Django app that most handles dependancies and delegates routing to the api. The `abapi` directory is the heart of the project and contains all the code for providing the backend REST api and data models. The `frontend` directory contains obviously enough the Angular frontend code with most of the important components in the `src/app` directory.
+This repository contains A.B.C.: "A Book Catalog", which is my submission for the Infoxchange developer challenge. The project is a Django backend with an Angular frontend. The project has three main directories, the first is `abcatalog` which is the top level Django app that most handles dependencies and delegates routing to the api. The `abapi` directory is the heart of the project and contains all the code for providing the backend REST api and data models. The `frontend` directory contains obviously enough the Angular frontend code with most of the important components in the `src/app` directory.
 
-The project was built with Python 3.7, but has also been tested in a continuious integration setup on Python 3.5 and 3.6 too. The continuious integration is setup on [Travis](https://travis-ci.org/PuZZleDucK/full-stack-developer-challenge) and is automatically deployed to Heroku on a successful build on the master branch.
+The project was built with Python 3.7, but has also been tested in a continuous integration setup on Python 3.5 and 3.6 too. The continuous integration is setup on Travis at [https://travis-ci.org/PuZZleDucK/full-stack-developer-challenge](https://travis-ci.org/PuZZleDucK/full-stack-developer-challenge) and is automatically deployed to Heroku at [https://a-book-catalog.herokuapp.com/](https://a-book-catalog.herokuapp.com/) on a successful build on the master branch.
 
 There are in effect four types of tests used in the project. The backend has TDD based unit tests and also makes extensive use of the Django Client integrations tests to verify end to end functionality of the api. The front end tests are not quite as robust as the backend tests but still contain unit tests for many of the components and end to end integrations tests for core functionality.
+
+Below I have included a couple of screenshots that capture the development practices I tried to adhere to. On the left is the git log graph showing the branch-develop-merge workflow along with alternating "test" and "feature" commits. The second image is a capture of the continuous integration build history demonstrating the "red/green" testing style I adopted for the backend.
+
+Git Log Graph                    | CI History
+:-------------------------------:|:----------------------------------------:
+![](log.png)                     | ![](red-green.png)
 
 
 ## Getting and Running the project
@@ -14,10 +20,12 @@ There are in effect four types of tests used in the project. The backend has TDD
 To build a local version of "A Book Catalog" it is recomended to create a new python environment and open a command line terminal. First we will need to clone the repository:
 ```
 git clone https://github.com/PuZZleDucK/full-stack-developer-challenge
+cd full-stack-developer-challenge
 ```
 Then install the backend dependancies:
 ```
 pip install -r requirements.txt
+python manage.py migrate
 ```
 Now we can run the backend tests (unit and integration tests are run with a single command):
 ```
@@ -57,6 +65,7 @@ There is also an online deployment on [Heroku](https://a-book-catalog.herokuapp.
 - GitHub: samples and examples
 - I would have liked to develop a better deployment
 - Testing on the front end could be improved as I rushed to finish
+- Visual presentation of front end could also be improved
 
 
 ## Plan
