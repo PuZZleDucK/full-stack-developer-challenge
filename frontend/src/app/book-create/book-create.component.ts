@@ -19,6 +19,7 @@ export class BookCreateComponent implements OnInit {
     this.router = in_router;
 }
 
+// Create form controlls for Book input
   ngOnInit() {
     this.bookGroup = new FormGroup({
       book_name: new FormControl(),
@@ -27,14 +28,15 @@ export class BookCreateComponent implements OnInit {
     });
   }
 
+  // Access form group to retrive latest values
   createBook(){
     var book = {
-        name: this.bookGroup.controls["book_name"].value,
-        isbn:  this.bookGroup.controls["book_isbn"].value,
-        author:  this.bookGroup.controls["book_author"].value
+      name: this.bookGroup.controls["book_name"].value,
+      isbn:  this.bookGroup.controls["book_isbn"].value,
+      author:  this.bookGroup.controls["book_author"].value
     };
     this.apiService.createBook(book).subscribe((response) => {
-      console.log(response);
+      // Route to book list after success
       this.router.navigate(['/books']);
     });
     };

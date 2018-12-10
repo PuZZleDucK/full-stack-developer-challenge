@@ -8,6 +8,7 @@ import { AuthorDetailComponent } from './author-detail/author-detail.component';
 import { AuthorCreateComponent } from './author-create/author-create.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 
+// Establish which components will handle requests to different paths
 const routes: Routes = [
   { path:  '', redirectTo:  'books', pathMatch:  'full' },
   {

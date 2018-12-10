@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import url, include
 
 
-
+# Most routing is handled by the abapi app and the admin console is not used
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('abapi.urls'))

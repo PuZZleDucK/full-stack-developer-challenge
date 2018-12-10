@@ -9,17 +9,17 @@ import { ApiService } from  '../api.service';
 export class AuthorListComponent implements OnInit {
   private  authors:  Array<object> = [];
 
-  constructor(private  apiService:  ApiService) { }
+  constructor(private apiService: ApiService) { }
 
+  // Retrive all authors for the list
   ngOnInit() {
     this.getAuthors();
   }
 
   public  getAuthors(){
-      this.apiService.getAuthors().subscribe((data:  Array<object>) => {
-          this.authors  =  data;
-          console.log(data);
-      });
+    this.apiService.getAuthors().subscribe((data: Array<object>) => {
+      this.authors = data;
+    });
   }
 
 }

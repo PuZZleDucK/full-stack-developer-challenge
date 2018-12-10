@@ -4,6 +4,7 @@ from rest_framework import viewsets
 from .searializers import AuthorSerializer, BookSerializer
 from rest_framework.response import Response
 
+# Generate default Author views based on the serializer and data model
 class AuthorViewSet(viewsets.ModelViewSet):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
@@ -13,6 +14,7 @@ class AuthorViewSet(viewsets.ModelViewSet):
         serializer = AuthorSerializer(queryset, many=True)
         return Response(serializer.data)
 
+# Generate default Book views based on the serializer and data model
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer

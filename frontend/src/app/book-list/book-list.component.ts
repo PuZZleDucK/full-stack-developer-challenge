@@ -9,16 +9,17 @@ import { ApiService } from  '../api.service';
 export class BookListComponent implements OnInit {
   private  books:  Array<object> = [];
 
-  constructor(private  apiService:  ApiService) { }
+  constructor(private apiService: ApiService) { }
 
+  // Retrive all authors for the list
   ngOnInit() {
     this.getBooks();
   }
 
-  public  getBooks(){
-      this.apiService.getBooks().subscribe((data:  Array<object>) => {
-          this.books  =  data;
-          console.log(data);
-      });
+  public getBooks(){
+    this.apiService.getBooks().subscribe((data: Array<object>) => {
+      this.books = data;
+      console.log(data);
+    });
   }
 }

@@ -1,18 +1,25 @@
 from django.test import TestCase
 from .models import Author, Book
 
-
 class ApiTest(TestCase):
 	def test_book_api_get_id(self):
-		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
-		self.client.post('/book/', {'name':'api-book','isbn':'0137129297','author': '1'})
+		self.client.post('/author/', {'first_name':'api-first'
+									 ,'last_name':'api-last'})
+		self.client.post('/book/', {'name':'api-book',
+									'isbn':'0137129297','author': '1'})
 		response = self.client.get('/book/1/')
 		self.assertEqual(response.status_code, 200)
-		self.assertEqual(response.json(), {'id': 1, 'name':'api-book','isbn':'0137129297','author': 1})
+		self.assertEqual(response.json(), {'id': 1,
+		                                   'name':'api-book',
+										   'isbn':'0137129297',
+										   'author': 1})
 
 	def test_book_api_get(self):
-		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
-		self.client.post('/book/', {'name':'api-book','isbn':'0137129297','author': '1'})
+		self.client.post('/author/', {'first_name':'api-first',
+									  'last_name':'api-last'})
+		self.client.post('/book/', {'name':'api-book',
+									'isbn':'0137129297',
+									'author': '1'})
 		response = self.client.get('/books/')
 		self.assertEqual(response.status_code, 200)
 		self.assertEqual(1, len(response.json()))
@@ -28,17 +35,21 @@ class ApiTest(TestCase):
 		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
 		response = self.client.get('/author/1/')
 		self.assertEqual(response.status_code, 200)
-		self.assertEqual(response.json(), {'id': 1, 'first_name':'api-first','last_name':'api-last'})
+		self.assertEqual(response.json(), {'id': 1,
+										   'first_name':'api-first',
+										   'last_name':'api-last'})
 
 	def test_author_api_get(self):
-		self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
+		self.client.post('/author/', {'first_name':'api-first',
+		 							  'last_name':'api-last'})
 		response = self.client.get('/authors/')
 		self.assertEqual(response.status_code, 200)
 		self.assertEqual(1, len(response.json()))
 
 	def test_author_api_create(self):
 		initial_count = Author.objects.all().count()
-		response = self.client.post('/author/', {'first_name':'api-first','last_name':'api-last'})
+		response = self.client.post('/author/', {'first_name':'api-first',
+		                                         'last_name':'api-last'})
 		self.assertEqual(response.status_code, 201)
 		self.assertEqual(initial_count + 1, Author.objects.all().count())
 

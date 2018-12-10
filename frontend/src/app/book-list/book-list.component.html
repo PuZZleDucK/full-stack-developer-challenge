@@ -1,18 +1,17 @@
 <h2>Book List</h2>
 <div>
-<table style="width:100%">
-<tr>
-    <th>Name</th>
-    <th>id</th>
-    <th>ISBN</th>
-    <th>Author</th>
-</tr>
-<tr *ngFor="let book of books">
-    <td style="text-align:center"><a [routerLink]="['/book', book.id]">  {{ book.name }} </a></td>
-    <td style="text-align:center"> {{ book.id }} </td>
-    <td style="text-align:center"> {{ book.isbn }} </td>
-    <td style="text-align:center"> {{ book.author }} </td>
-</tr>
-</table>
-
+  <table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>id</th>
+        <th>ISBN</th>
+        <th>Author</th>
+    </tr>
+    <tr *ngFor="let book of books">
+        <td style="text-align:center"><a [routerLink]="['/book', book.id]">  {{ book.name }} </a></td>
+        <td style="text-align:center"> {{ book.id }} </td>
+        <td style="text-align:center"> {{ book.isbn }} </td>
+        <td style="text-align:center"> {{ book.author }} </td>
+    </tr>
+  </table>
 </div>
